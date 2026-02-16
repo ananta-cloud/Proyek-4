@@ -59,15 +59,12 @@ class _OnboardingViewState extends State<OnboardingView> {
               ),
               const SizedBox(height: 40),
 
-              // UPDATE 2: Menggunakan Image.network menggantikan Icon
-              // AnimatedSwitcher membuat transisi gambar lebih halus saat berubah
               Expanded(
                 flex: 2,
                 child: AnimatedSwitcher(
                   duration: const Duration(milliseconds: 500),
                   child: Image.asset(
                     currentData["image"]!,
-                    // Key penting agar animasi tahu gambar berubah
                     key: ValueKey<int>(_step),
                     fit: BoxFit.contain,
                     errorBuilder: (context, error, stackTrace) {

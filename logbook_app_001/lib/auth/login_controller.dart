@@ -6,7 +6,6 @@ class User {
 }
 
 class LoginController {
-  // Database sederhana (Hardcoded)
   final List<User> _users = [
     User(username: "admin", password: "123", role: "admin"),
     User(username: "admin1", password: "123", role: "user"),

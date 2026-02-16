@@ -20,16 +20,11 @@ class _CounterViewState extends State<CounterView> {
   @override
   void initState() {
     super.initState();
-    // PANGGIL FUNGSI LOAD DATA DI SINI
     _loadUserData();
   }
 
-  // Fungsi Async untuk memuat data & refresh UI
   Future<void> _loadUserData() async {
-    // Kita kirim username user yang sedang login ke controller
     await _controller.loadData(widget.user.username);
-    
-    // Setelah data selesai dimuat, update UI
     setState(() {
        _stepController.text = _controller.step.toString();
     });
@@ -175,7 +170,6 @@ class _CounterViewState extends State<CounterView> {
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    // Casting color aman karena sudah dikonversi di controller
                     border: Border.all(color: item["color"] as Color, width: 2),
                     borderRadius: BorderRadius.circular(8),
                     boxShadow: const [

@@ -1,8 +1,5 @@
-// login_view.dart
 import 'package:flutter/material.dart';
-// Import Controller milik sendiri (masih satu folder)
 import 'login_controller.dart';
-// Import View dari fitur lain (Logbook) untuk navigasi
 import '../logbook/counter_view.dart';
 
 class LoginView extends StatefulWidget {
@@ -12,7 +9,6 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
-  // Inisialisasi Otak dan Controller Input
   final LoginController _controller = LoginController();
   final TextEditingController _userController = TextEditingController();
   final TextEditingController _passController = TextEditingController();
@@ -41,7 +37,7 @@ class _LoginViewState extends State<LoginView> {
             ],
           ),
           backgroundColor: Colors.redAccent,
-          behavior: SnackBarBehavior.floating, 
+          behavior: SnackBarBehavior.floating,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -65,8 +61,8 @@ class _LoginViewState extends State<LoginView> {
               decoration: const InputDecoration(labelText: "Username"),
             ),
             TextField(
-              controller: _passController, // Controller dimasukkan ke sini
-              obscureText: _isObscure, // Menggunakan variabel state
+              controller: _passController,
+              obscureText: _isObscure,
               keyboardType: TextInputType.visiblePassword,
               textInputAction: TextInputAction.done,
               decoration: InputDecoration(
