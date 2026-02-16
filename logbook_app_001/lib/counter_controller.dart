@@ -9,7 +9,6 @@ class CounterController {
   // int get step => _step;
   // List<String> get history => _history.reversed.take(5).toList();
 
-
   final List<Map<String, dynamic>> _history = []; // simpan Map
   int get value => _counter;
   int get step => _step;
@@ -39,15 +38,13 @@ class CounterController {
 
   void reset() {
     _counter = 0;
-    _addHistory("Nilai direset", Colors.red );
+    _addHistory("Nilai direset", Colors.red);
   }
 
   void _addHistory(String action, Color color) {
-    final now = DateFormat.Hm().format(DateTime.now()); 
-    _history.add({
-      "text": action,
-      "color": color,
-      "time": now,
-    });
+    final now = DateFormat.Hm().format(DateTime.now());
+    _history.add({"text": action, "color": color, "time": now});
   }
+
+  
 }
