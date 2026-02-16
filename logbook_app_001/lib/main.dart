@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'counter_view.dart';
+// import 'logbook/counter_view.dart';
+import 'onboarding/onboarding_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const CounterView(),
+      home: const OnboardingView(),
     );
   }
 }
